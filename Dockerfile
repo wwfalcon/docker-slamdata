@@ -7,4 +7,5 @@ RUN apk --update add openjdk8-jre wget gzip ghostscript-fonts font-misc-misc \
 	&& chmod +x slamdata.sh \
       	&& echo -ne 'o\n/usr/local/slamdata\ny\n/usr/local/bin\n' | ./slamdata.sh -c
 
+VOLUME /slamdata
 ENTRYPOINT ["/usr/local/bin/SlamData"]
